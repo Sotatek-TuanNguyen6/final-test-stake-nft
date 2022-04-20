@@ -1,0 +1,90 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+    "txHash": "0x55a14b0cb083306362d83a8f097090cc9861c3d393fe8ac1974cf023a3d5d324"
+  },
+  "proxies": [
+    {
+      "address": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
+      "txHash": "0x4cc922c16ffd38e5c4cede0e167df45618024bcff6756ba019334573ba26bc0f",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "9b9cc01808326d518f4bec1173911ebd3a2e3174b9e4a59efeb5b978359089af": {
+      "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+      "txHash": "0x81e211bf831d01726b6b2da599b7b43a43ec9994da82da0be00e8b40446660c7",
+      "layout": {
+        "storage": [
+          {
+            "label": "counterOrder",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256",
+            "contract": "NFTMarketplaceV1",
+            "src": "contracts/NFTMarketplace_V1.sol:19"
+          },
+          {
+            "label": "listOrders",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_uint256,t_struct(Order)2010_storage)",
+            "contract": "NFTMarketplaceV1",
+            "src": "contracts/NFTMarketplace_V1.sol:20"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_uint256,t_struct(Order)2010_storage)": {
+            "label": "mapping(uint256 => struct NFTMarketplaceV1.Order)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Order)2010_storage": {
+            "label": "struct NFTMarketplaceV1.Order",
+            "members": [
+              {
+                "label": "seller",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "collection",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "nftsId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "tokenAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "price",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              }
+            ],
+            "numberOfBytes": "160"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/NFTMarketplace_V2.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">contracts/</a> NFTMarketplace_V2.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/22</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+&nbsp;
+import "./inteface/inteface.sol";
+&nbsp;
+&nbsp;
+contract NFTMarketplaceV2 {
+    struct Order {
+        address seller;
+        address collection;   
+        uint256 nftsId;
+        address tokenAddress;
+        uint256 price;   
+    }
+&nbsp;
+    uint256 counterOrder;
+    mapping (uint256 =&gt; Order) listOrders;
+    address treasury;
+    uint256 fee;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getCounterOrder() public view returns (uint256) {</span>
+<span class="cstat-no" title="statement not covered" >        return counterOrder;</span>
+    } 
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function createOrder(address _collection, uint256 _nftsId, address _tokenAddress, uint256 _price) public {</span>
+<span class="cstat-no" title="statement not covered" >        require(IERC721(_collection).ownerOf(_nftsId) == msg.sender, "Only NFT's owner have permit to transfer.")</span>;
+<span class="cstat-no" title="statement not covered" >        require(IERC721(_collection).isApprovedForAll(msg.sender, address(this)), "NFT need to approval.")</span>;
+<span class="cstat-no" title="statement not covered" >        IERC721(_collection).transferFrom(msg.sender, address(this), _nftsId)</span>;
+<span class="cstat-no" title="statement not covered" >        Order memory newOrder = Order(msg.sender, _collection, _nftsId, _tokenAddress, _price);</span>
+<span class="cstat-no" title="statement not covered" >        listOrders[counterOrder] = newOrder</span>;
+        counterOrder++;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function addTreasury(address _treasuryAddress) public {</span>
+<span class="cstat-no" title="statement not covered" >        treasury = _treasuryAddress</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getTreasury() view public returns (address){</span>
+<span class="cstat-no" title="statement not covered" >        return treasury;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function setFee(uint256 _fee) public {</span>
+<span class="cstat-no" title="statement not covered" >        fee = _fee</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getFee() view public returns (uint256){</span>
+<span class="cstat-no" title="statement not covered" >        return fee;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function isOrderExists(uint256 key) public view returns (bool) {</span>
+<span class="cstat-no" title="statement not covered" >        if(listOrders[key].nftsId != 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return true;</span>
+        } 
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function matchOrder(uint256 _orderId) public {   </span>
+<span class="cstat-no" title="statement not covered" >        require(isOrderExists(_orderId), "Order exitsed")</span>;    
+<span class="cstat-no" title="statement not covered" >        Order memory currentOrder = listOrders[_orderId];  </span>
+<span class="cstat-no" title="statement not covered" >        require(IERC20(currentOrder.tokenAddress).allowance(msg.sender, address(this)) != 0, 'Token need to approval.')</span>;
+<span class="cstat-no" title="statement not covered" >        require(IERC20(currentOrder.tokenAddress).balanceOf(msg.sender) &gt;= currentOrder.price, "Buyer's balance have to greater than or equal nft'price")</span>;
+<span class="cstat-no" title="statement not covered" >        IERC721(currentOrder.collection).transferFrom(address(this), msg.sender, currentOrder.nftsId)</span>;
+<span class="cstat-no" title="statement not covered" >        IERC20(currentOrder.tokenAddress).transferFrom(msg.sender, treasury, (currentOrder.price * (100 + fee) / 100))</span>;
+<span class="cstat-no" title="statement not covered" >        IERC20(currentOrder.tokenAddress).transferFrom(treasury, currentOrder.seller, (currentOrder.price * (100 - fee) / 100))</span>;
+<span class="cstat-no" title="statement not covered" >        listOrders[_orderId].nftsId = 0</span>;
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 20 2022 11:12:35 GMT+0700 (Indochina Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
