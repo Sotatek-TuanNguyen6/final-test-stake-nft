@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-import "./inteface/inteface.sol";
+import "../utils/inteface/inteface.sol";
 
 contract NFTMarketplaceV1 {
     struct Order {
@@ -9,7 +9,7 @@ contract NFTMarketplaceV1 {
         address collection;   
         uint256 nftsId;
         address tokenAddress;
-        uint256 price;   
+        uint256 price;
     }
 
     uint256 counterOrder;
@@ -31,7 +31,7 @@ contract NFTMarketplaceV1 {
     function matchOrder(uint256 _orderId) public {   
         Order memory currentOrder = listOrders[_orderId];  
         require(IERC20(currentOrder.tokenAddress).allowance(msg.sender, address(this)) != 0, 'Token need to approval.');
-        require(IERC20(currentOrder.tokenAddress).balanceOf(msg.sender) >= currentOrder.price, "Buyer's balance have to greater than or equal nft'price");
+        require(IERC20(currentOrder.tokenAddress).balanceOf(msg.sender) >= currentOrder.price, "Buyer's balance have to greater than or equal nfts's price");
         IERC721(currentOrder.collection).transferFrom(address(this), msg.sender, currentOrder.nftsId);
         listOrders[_orderId].nftsId = 0;
     }
